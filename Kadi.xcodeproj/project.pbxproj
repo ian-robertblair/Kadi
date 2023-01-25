@@ -11,6 +11,7 @@
 		628EF2582980DD90001AB563 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2572980DD90001AB563 /* ContentView.swift */; };
 		628EF25A2980DD92001AB563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628EF2592980DD92001AB563 /* Assets.xcassets */; };
 		628EF25D2980DD92001AB563 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628EF25C2980DD92001AB563 /* Preview Assets.xcassets */; };
+		628EF2692980E21F001AB563 /* Kadi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2672980E21F001AB563 /* Kadi.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		628EF2572980DD90001AB563 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		628EF2592980DD92001AB563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		628EF25C2980DD92001AB563 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		628EF2682980E21F001AB563 /* Kadi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kadi.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,10 @@
 		628EF2542980DD90001AB563 /* Kadi */ = {
 			isa = PBXGroup;
 			children = (
+				628EF2662980E1FE001AB563 /* View */,
+				628EF2652980E1E0001AB563 /* ViewModel */,
+				628EF2642980E1D6001AB563 /* Data */,
+				628EF2632980E1CB001AB563 /* App */,
 				628EF2552980DD90001AB563 /* KadiApp.swift */,
 				628EF2572980DD90001AB563 /* ContentView.swift */,
 				628EF2592980DD92001AB563 /* Assets.xcassets */,
@@ -65,6 +71,35 @@
 				628EF25C2980DD92001AB563 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		628EF2632980E1CB001AB563 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		628EF2642980E1D6001AB563 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				628EF2672980E21F001AB563 /* Kadi.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		628EF2652980E1E0001AB563 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		628EF2662980E1FE001AB563 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				628EF2582980DD90001AB563 /* ContentView.swift in Sources */,
+				628EF2692980E21F001AB563 /* Kadi.xcdatamodeld in Sources */,
 				628EF2562980DD90001AB563 /* KadiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +375,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		628EF2672980E21F001AB563 /* Kadi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				628EF2682980E21F001AB563 /* Kadi.xcdatamodel */,
+			);
+			currentVersion = 628EF2682980E21F001AB563 /* Kadi.xcdatamodel */;
+			path = Kadi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 628EF24A2980DD90001AB563 /* Project object */;
 }
