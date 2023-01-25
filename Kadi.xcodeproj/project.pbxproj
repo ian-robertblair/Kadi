@@ -8,19 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		628EF2562980DD90001AB563 /* KadiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2552980DD90001AB563 /* KadiApp.swift */; };
-		628EF2582980DD90001AB563 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2572980DD90001AB563 /* ContentView.swift */; };
 		628EF25A2980DD92001AB563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628EF2592980DD92001AB563 /* Assets.xcassets */; };
 		628EF25D2980DD92001AB563 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628EF25C2980DD92001AB563 /* Preview Assets.xcassets */; };
 		628EF2692980E21F001AB563 /* Kadi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2672980E21F001AB563 /* Kadi.xcdatamodeld */; };
+		628EF26B2980E60E001AB563 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF26A2980E60E001AB563 /* Persistence.swift */; };
+		628EF26D2980E6D7001AB563 /* DecksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF26C2980E6D7001AB563 /* DecksView.swift */; };
+		628EF26F2980E70E001AB563 /* DecksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF26E2980E70E001AB563 /* DecksViewModel.swift */; };
+		628EF2712980E761001AB563 /* AddDeckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2702980E761001AB563 /* AddDeckViewModel.swift */; };
+		628EF2732980E78B001AB563 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2722980E78B001AB563 /* AddCardViewModel.swift */; };
+		628EF2752980E7AB001AB563 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2742980E7AB001AB563 /* NoteViewModel.swift */; };
+		628EF2772980E816001AB563 /* AddDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2762980E816001AB563 /* AddDeckView.swift */; };
+		628EF2792980E96A001AB563 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2782980E96A001AB563 /* AddCardView.swift */; };
+		628EF27D2980EADA001AB563 /* NoteStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF27C2980EADA001AB563 /* NoteStackView.swift */; };
+		628EF2802980ECEE001AB563 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF27F2980ECED001AB563 /* TextToSpeech.swift */; };
+		628EF2822980EEDB001AB563 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2812980EEDB001AB563 /* NoteView.swift */; };
+		628EF2842980F64F001AB563 /* NoteStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2832980F64F001AB563 /* NoteStackViewModel.swift */; };
+		628EF28729814A7B001AB563 /* STHeiti-Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 628EF28629814A7B001AB563 /* STHeiti-Light.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		628EF2522980DD90001AB563 /* Kadi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kadi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		628EF2552980DD90001AB563 /* KadiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadiApp.swift; sourceTree = "<group>"; };
-		628EF2572980DD90001AB563 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		628EF2592980DD92001AB563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		628EF25C2980DD92001AB563 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		628EF2682980E21F001AB563 /* Kadi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kadi.xcdatamodel; sourceTree = "<group>"; };
+		628EF26A2980E60E001AB563 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		628EF26C2980E6D7001AB563 /* DecksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksView.swift; sourceTree = "<group>"; };
+		628EF26E2980E70E001AB563 /* DecksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewModel.swift; sourceTree = "<group>"; };
+		628EF2702980E761001AB563 /* AddDeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeckViewModel.swift; sourceTree = "<group>"; };
+		628EF2722980E78B001AB563 /* AddCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewModel.swift; sourceTree = "<group>"; };
+		628EF2742980E7AB001AB563 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		628EF2762980E816001AB563 /* AddDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeckView.swift; sourceTree = "<group>"; };
+		628EF2782980E96A001AB563 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		628EF27C2980EADA001AB563 /* NoteStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStackView.swift; sourceTree = "<group>"; };
+		628EF27F2980ECED001AB563 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		628EF2812980EEDB001AB563 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		628EF2832980F64F001AB563 /* NoteStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStackViewModel.swift; sourceTree = "<group>"; };
+		628EF28629814A7B001AB563 /* STHeiti-Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Light.ttc"; sourceTree = "<group>"; };
+		628EF28829814AD0001AB563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +78,14 @@
 		628EF2542980DD90001AB563 /* Kadi */ = {
 			isa = PBXGroup;
 			children = (
+				628EF28829814AD0001AB563 /* Info.plist */,
+				628EF28529814A36001AB563 /* Fonts */,
+				628EF27E2980ECBD001AB563 /* Utility */,
 				628EF2662980E1FE001AB563 /* View */,
 				628EF2652980E1E0001AB563 /* ViewModel */,
 				628EF2642980E1D6001AB563 /* Data */,
 				628EF2632980E1CB001AB563 /* App */,
 				628EF2552980DD90001AB563 /* KadiApp.swift */,
-				628EF2572980DD90001AB563 /* ContentView.swift */,
 				628EF2592980DD92001AB563 /* Assets.xcassets */,
 				628EF25B2980DD92001AB563 /* Preview Content */,
 			);
@@ -76,6 +103,10 @@
 		628EF2632980E1CB001AB563 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				628EF26C2980E6D7001AB563 /* DecksView.swift */,
+				628EF2782980E96A001AB563 /* AddCardView.swift */,
+				628EF2762980E816001AB563 /* AddDeckView.swift */,
+				628EF2812980EEDB001AB563 /* NoteView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -84,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				628EF2672980E21F001AB563 /* Kadi.xcdatamodeld */,
+				628EF26A2980E60E001AB563 /* Persistence.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -91,6 +123,11 @@
 		628EF2652980E1E0001AB563 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				628EF26E2980E70E001AB563 /* DecksViewModel.swift */,
+				628EF2702980E761001AB563 /* AddDeckViewModel.swift */,
+				628EF2722980E78B001AB563 /* AddCardViewModel.swift */,
+				628EF2742980E7AB001AB563 /* NoteViewModel.swift */,
+				628EF2832980F64F001AB563 /* NoteStackViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -98,8 +135,25 @@
 		628EF2662980E1FE001AB563 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				628EF27C2980EADA001AB563 /* NoteStackView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		628EF27E2980ECBD001AB563 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				628EF27F2980ECED001AB563 /* TextToSpeech.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		628EF28529814A36001AB563 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				628EF28629814A7B001AB563 /* STHeiti-Light.ttc */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628EF28729814A7B001AB563 /* STHeiti-Light.ttc in Resources */,
 				628EF25D2980DD92001AB563 /* Preview Assets.xcassets in Resources */,
 				628EF25A2980DD92001AB563 /* Assets.xcassets in Resources */,
 			);
@@ -172,9 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				628EF2582980DD90001AB563 /* ContentView.swift in Sources */,
+				628EF2772980E816001AB563 /* AddDeckView.swift in Sources */,
+				628EF2802980ECEE001AB563 /* TextToSpeech.swift in Sources */,
+				628EF26F2980E70E001AB563 /* DecksViewModel.swift in Sources */,
+				628EF2842980F64F001AB563 /* NoteStackViewModel.swift in Sources */,
+				628EF26B2980E60E001AB563 /* Persistence.swift in Sources */,
 				628EF2692980E21F001AB563 /* Kadi.xcdatamodeld in Sources */,
+				628EF27D2980EADA001AB563 /* NoteStackView.swift in Sources */,
+				628EF2792980E96A001AB563 /* AddCardView.swift in Sources */,
+				628EF2712980E761001AB563 /* AddDeckViewModel.swift in Sources */,
+				628EF2752980E7AB001AB563 /* NoteViewModel.swift in Sources */,
+				628EF26D2980E6D7001AB563 /* DecksView.swift in Sources */,
+				628EF2822980EEDB001AB563 /* NoteView.swift in Sources */,
 				628EF2562980DD90001AB563 /* KadiApp.swift in Sources */,
+				628EF2732980E78B001AB563 /* AddCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +372,7 @@
 				DEVELOPMENT_TEAM = KHAQRXX59T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kadi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +402,7 @@
 				DEVELOPMENT_TEAM = KHAQRXX59T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kadi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
