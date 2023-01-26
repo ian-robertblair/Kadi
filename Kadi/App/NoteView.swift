@@ -15,7 +15,7 @@ struct NoteView: View {
     let deckName: String
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             VStack {
                 GeometryReader { geometry in
                     ZStack {
@@ -65,7 +65,7 @@ struct NoteView: View {
                     .padding(.bottom, 20)
                 }
             }
-        } //Navigation
+        //} //Navigation
     }
 }
 

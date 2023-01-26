@@ -11,16 +11,6 @@ struct DecksView: View {
     @StateObject private var decksViewModel = DecksViewModel()
     @State private var showAddDeckView:Bool = false
     
-    init(){
-        for family in UIFont.familyNames {
-             print(family)
-
-             for names in UIFont.fontNames(forFamilyName: family){
-             print("== \(names)")
-             }
-        }
-    }
-    
     var body: some View {
         NavigationView {
             List {
