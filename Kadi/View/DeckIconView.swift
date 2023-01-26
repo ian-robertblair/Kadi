@@ -26,6 +26,8 @@ struct DeckIconView: View {
                     .padding(.horizontal, 5)
                     .foregroundColor(Color("TextColor"))
                     .font(.custom("HanziPenSC", size: 20))
+                    .kerning(-2)
+                    .lineLimit(3)
             }
             .frame(width: 150, height: 150)
             .background(Color("CardColor"))

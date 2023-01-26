@@ -36,15 +36,21 @@ struct NoteStackView: View {
                         .padding(.horizontal, 5)
                         .foregroundColor(Color("TextColor"))
                         .font(Font.custom("HanziPenSC", size: 22))
+                        .kerning(-2)
+                        .lineLimit(3)
                 } else {
                     Text(card.l2Word ?? "")
                         .padding(.horizontal, 5)
                         .foregroundColor(Color("TextColor"))
                         .font(.custom("HanziPenSC", size: 22, relativeTo: .title2))
+                        .kerning(-2)
+                        .lineLimit(3)
                     Text(card.l2Pronunciation ?? "")
                         .padding(.horizontal, 5)
                         .foregroundColor(Color("TextColor"))
                         .font(.custom("HanziPenSC", size: 14, relativeTo: .footnote))
+                        .kerning(-2)
+                        .lineLimit(3)
                         
                 }
                 
