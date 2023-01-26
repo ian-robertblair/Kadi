@@ -24,6 +24,7 @@
 		628EF2822980EEDB001AB563 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2812980EEDB001AB563 /* NoteView.swift */; };
 		628EF2842980F64F001AB563 /* NoteStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2832980F64F001AB563 /* NoteStackViewModel.swift */; };
 		628EF28729814A7B001AB563 /* STHeiti-Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 628EF28629814A7B001AB563 /* STHeiti-Light.ttc */; };
+		62FD86FC29822A940078EE5A /* DeckIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD86FB29822A940078EE5A /* DeckIconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		628EF2832980F64F001AB563 /* NoteStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStackViewModel.swift; sourceTree = "<group>"; };
 		628EF28629814A7B001AB563 /* STHeiti-Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Light.ttc"; sourceTree = "<group>"; };
 		628EF28829814AD0001AB563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		62FD86FB29822A940078EE5A /* DeckIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				628EF27C2980EADA001AB563 /* NoteStackView.swift */,
+				62FD86FB29822A940078EE5A /* DeckIconView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				628EF26F2980E70E001AB563 /* DecksViewModel.swift in Sources */,
 				628EF2842980F64F001AB563 /* NoteStackViewModel.swift in Sources */,
 				628EF26B2980E60E001AB563 /* Persistence.swift in Sources */,
+				62FD86FC29822A940078EE5A /* DeckIconView.swift in Sources */,
 				628EF2692980E21F001AB563 /* Kadi.xcdatamodeld in Sources */,
 				628EF27D2980EADA001AB563 /* NoteStackView.swift in Sources */,
 				628EF2792980E96A001AB563 /* AddCardView.swift in Sources */,

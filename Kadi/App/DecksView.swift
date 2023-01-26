@@ -13,6 +13,52 @@ struct DecksView: View {
     
     var body: some View {
         NavigationView {
+            //VStack {
+                let gridItems  = [ GridItem(), GridItem() ]
+                
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: gridItems) {
+                        ForEach(decksViewModel.cards) { deck in
+                            NavigationLink {
+                                //
+                                NoteView(deckName: deck.name ?? "")
+                            } label: {
+                                DeckIconView(name: deck.name ?? "", decksViewModel: decksViewModel)
+                                    .padding(.top, 20)
+                            }
+                            .tint(Color("TextColor"))
+                        }//For
+                    }//Grid
+                }
+                
+            //}//VStacck
+            .sheet(isPresented: $showAddDeckView, content: {
+                AddDeckView(decksViewModel: decksViewModel)
+            })
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("BackgroundColor"))
+            .onAppear {
+                decksViewModel.getDecks()
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                        showAddDeckView.toggle()
+                    } label: {
+                        
+                        Image(systemName: "plus.circle")
+                    }
+                    .tint(Color("CardColor"))
+                    .font(.title)
+                    .padding()
+                    
+                }
+            }//toolbar
+            
+            
+            
+            /*
             List {
                 ForEach(decksViewModel.cards) { deck in
                     NavigationLink {
@@ -20,7 +66,7 @@ struct DecksView: View {
                         NoteView(deckName: deck.name ?? "")
                     } label: {
                         Text(deck.name ?? "")
-                            //.padding(.top, 20)
+                        //.padding(.top, 20)
                     }
                     .foregroundColor(Color("TextColor"))
                     //.tint(Color("TextColor"))
@@ -54,6 +100,9 @@ struct DecksView: View {
                     
                 }
             }//toolbar
+            */
+            
+            
         }//Nav
     }//View
 }

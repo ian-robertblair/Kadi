@@ -62,7 +62,6 @@ struct NoteView: View {
                     .tint(Color("CardColor"))
                     .font(.title)
                     .padding()
-                    .padding(.bottom, 20)
                 }
             }
         //} //Navigation
