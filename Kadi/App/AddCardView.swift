@@ -9,9 +9,10 @@ import SwiftUI
 
 struct AddCardView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var showValidationAlert: Bool = false
     @StateObject private var addCardViewModel = AddCardViewModel()
     @StateObject var noteViewModel:NoteViewModel
-   
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -72,19 +73,24 @@ struct AddCardView: View {
                     .padding(.horizontal, 20)
                     .padding(.bottom, 20)
             }//VStack
+            .onAppear {
+                UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color("TextColor"))
+            }
             .padding(.top, 30)
             Spacer()
             
             Button {
-                addCardViewModel.deckName = noteViewModel.deckName
-                addCardViewModel.addCard()
-                noteViewModel.getCards()
-                noteViewModel.setPositions()
-                noteViewModel.setzIndexes()
-                noteViewModel.setisFlipped()
-                
-                self.presentationMode.wrappedValue.dismiss()
-                
+                if addCardViewModel.checkValidation() {
+                    showValidationAlert.toggle()
+                } else {
+                    addCardViewModel.deckName = noteViewModel.deckName
+                    addCardViewModel.addCard()
+                    noteViewModel.getCards()
+                    noteViewModel.setPositions()
+                    noteViewModel.setzIndexes()
+                    noteViewModel.setisFlipped()
+                    self.presentationMode.wrappedValue.dismiss()
+                }
             } label: {
                 Text("Save")
                     .frame(width: 200)
@@ -104,6 +110,10 @@ struct AddCardView: View {
         }//Vstack
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
+        .alert(isPresented: $showValidationAlert) {
+            Alert(title: Text("Warning!"), message: Text("Selecting a language, Word in your language, Word in language you want to learn are required."), dismissButton: .cancel(Text("OK").foregroundColor(Color("TextColor"))))
+        }
+       
       
     }
 }

@@ -11,6 +11,7 @@ struct AddDeckView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var addDeckViewModel = AddDeckViewModel()
     @StateObject var decksViewModel:DecksViewModel
+    @State private var showValidationAlert: Bool = false
     
     var body: some View {
         NavigationView {
@@ -39,10 +40,13 @@ struct AddDeckView: View {
                 Spacer()
                 Button {
                     //
-                    addDeckViewModel.addDeck()
-                    decksViewModel.getDecks()
-                    self.presentationMode.wrappedValue.dismiss()
-                    
+                    if addDeckViewModel.checkValidation() {
+                        showValidationAlert.toggle()
+                    } else {
+                        addDeckViewModel.addDeck()
+                        decksViewModel.getDecks()
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
                 } label: {
                     Text("Save")
                         .frame(width: 200)
@@ -63,6 +67,9 @@ struct AddDeckView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
+        .alert(isPresented: $showValidationAlert) {
+            Alert(title: Text("Warning!"), message: Text("Name is required."), dismissButton: .cancel(Text("OK")))
+        }
             
         }//NAV
 

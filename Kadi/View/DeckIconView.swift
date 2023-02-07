@@ -10,9 +10,28 @@ import SwiftUI
 struct DeckIconView: View {
     let name:String
     let decksViewModel: DecksViewModel
+    @State var showConfirmation:Bool = false
     
     var body: some View {
         ZStack {
+            Button {
+                showConfirmation.toggle()
+                
+                
+            } label: {
+                Image(systemName: "x.circle")
+            }
+            .zIndex(3)
+            .offset(x: 55, y: -60)
+            .foregroundColor(Color("TextColor"))
+            .font(.body)
+            .confirmationDialog("Delete deck?", isPresented: $showConfirmation, titleVisibility: .visible) {
+                Button("Yes", role: .destructive) {
+                    decksViewModel.deleteDeck(name: name)
+                }
+                
+            }
+
             VStack {
             
             }
@@ -34,14 +53,6 @@ struct DeckIconView: View {
             .clipped()
             .shadow(color: .black, radius: 2, x: 1, y:1)
             .zIndex(1)
-            .contextMenu {
-                Button {
-                    decksViewModel.deleteDeck(name: name)
-                } label: {
-                    Label("Delete", systemImage: "trash")
-                }
-            }
-            
         }//ZStack
     }
 }

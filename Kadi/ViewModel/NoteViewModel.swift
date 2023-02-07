@@ -17,6 +17,10 @@ class NoteViewModel:ObservableObject {
     @Published var positions = [CGPoint]()
     @Published var isFlipped = [Bool]()
     @Published var center = CGPoint()
+    @Published var startAnimation: Bool = false
+    @Published var showAddCardView: Bool = false
+    @Published var showHelp: Bool = true
+  
    
     
     init() {

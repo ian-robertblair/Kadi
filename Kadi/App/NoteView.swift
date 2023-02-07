@@ -9,9 +9,8 @@ import SwiftUI
 
 struct NoteView: View {
     @StateObject private var cards:NoteViewModel = NoteViewModel()
-    @State private var startAnimation: Bool = false
     @State private var showAddCardView: Bool = false
-    @State private var center:CGPoint = CGPoint()
+    
     let deckName: String
     
     var body: some View {
@@ -19,25 +18,36 @@ struct NoteView: View {
             VStack {
                 GeometryReader { geometry in
                     ZStack {
+                        if cards.showHelp {
+                            HStack{
+                                Image(systemName: "arrow.left")
+                                Text("Drag")
+                                    .font(Font.custom("HanziPenSC", size: 22))
+                            }
+                                .zIndex(10)
+                                .offset(y: -200)
+                                .foregroundColor(Color("CardColor"))
+                        }
+                    
                         VStack {
                         
                         }
                         .frame(width: 250, height: 250)
                         .background(Color("CardColor"))
                         .rotationEffect(.degrees(-3))
-                        .position(center)
+                        .position(cards.center)
                         .zIndex(0)
                 
                         ForEach(cards.deck) { card in
-                            NoteStackView(cards: cards, center: center, card: card)
+                            NoteStackView(cards: cards, card: card)
                             
                         } //For
                     }//ZStack
                     .onAppear {
-                        center = CGPoint(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY - 50)
+                        cards.center = CGPoint(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY - 50)
                         cards.deckName = self.deckName
-                        cards.center = center
-                        print(center.debugDescription)
+                        cards.center = cards.center
+                        //print(center.debugDescription)
                         cards.getCards()
                         cards.setPositions()
                         cards.setzIndexes()

@@ -10,12 +10,11 @@ import Speech
 
 @MainActor
 class NoteStackViewModel: ObservableObject {
-    //@Published var speechSynth = AVSpeechSynthesizer()
     var speechSynth = AVSpeechSynthesizer()
     
     
     func ttsPlay(text: String?, langauge: String?) {
-        //let speechSynth = AVSpeechSynthesizer()
+        
         
         let utterance = AVSpeechUtterance(string: text ?? "No word provided.")
         utterance.rate = 0.4

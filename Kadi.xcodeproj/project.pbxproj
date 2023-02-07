@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6225F6392985F0D600984B2B /* PropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6225F6382985F0D600984B2B /* PropertyList.plist */; };
+		6225F63B2985F32C00984B2B /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6225F63A2985F32C00984B2B /* StoreKitManager.swift */; };
 		628EF2562980DD90001AB563 /* KadiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2552980DD90001AB563 /* KadiApp.swift */; };
 		628EF25A2980DD92001AB563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628EF2592980DD92001AB563 /* Assets.xcassets */; };
 		628EF25D2980DD92001AB563 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628EF25C2980DD92001AB563 /* Preview Assets.xcassets */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6225F6372985ECE100984B2B /* FullVersion.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = FullVersion.storekit; sourceTree = "<group>"; };
+		6225F6382985F0D600984B2B /* PropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PropertyList.plist; sourceTree = "<group>"; };
+		6225F63A2985F32C00984B2B /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		628EF2522980DD90001AB563 /* Kadi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kadi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		628EF2552980DD90001AB563 /* KadiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadiApp.swift; sourceTree = "<group>"; };
 		628EF2592980DD92001AB563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6225F6362985EC9E00984B2B /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				6225F6372985ECE100984B2B /* FullVersion.storekit */,
+				6225F6382985F0D600984B2B /* PropertyList.plist */,
+				6225F63A2985F32C00984B2B /* StoreKitManager.swift */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
 		628EF2492980DD90001AB563 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +95,7 @@
 		628EF2542980DD90001AB563 /* Kadi */ = {
 			isa = PBXGroup;
 			children = (
+				6225F6362985EC9E00984B2B /* StoreKit */,
 				628EF28829814AD0001AB563 /* Info.plist */,
 				628EF28529814A36001AB563 /* Fonts */,
 				628EF27E2980ECBD001AB563 /* Utility */,
@@ -218,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				628EF28729814A7B001AB563 /* STHeiti-Light.ttc in Resources */,
+				6225F6392985F0D600984B2B /* PropertyList.plist in Resources */,
 				628EF25D2980DD92001AB563 /* Preview Assets.xcassets in Resources */,
 				628EF25A2980DD92001AB563 /* Assets.xcassets in Resources */,
 			);
@@ -230,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6225F63B2985F32C00984B2B /* StoreKitManager.swift in Sources */,
 				628EF2772980E816001AB563 /* AddDeckView.swift in Sources */,
 				628EF2802980ECEE001AB563 /* TextToSpeech.swift in Sources */,
 				628EF26F2980E70E001AB563 /* DecksViewModel.swift in Sources */,
@@ -377,11 +395,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kadi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kadi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,9 +408,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "IOS-Dev.Kadi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,11 +429,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kadi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Kadi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,9 +442,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "IOS-Dev.Kadi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

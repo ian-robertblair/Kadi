@@ -12,7 +12,7 @@ struct NoteStackView: View {
     @StateObject var cards:NoteViewModel
     @StateObject var noteStackViewModel = NoteStackViewModel()
     @State private var startAnimation: Bool = false
-    let center:CGPoint
+    
     var card:Card
     
     var body: some View {
@@ -23,7 +23,7 @@ struct NoteStackView: View {
                         //
                         cards.deleteCard(card: card)
                     } label: {
-                        Image(systemName: "trash")
+                        Image(systemName: "x.circle")
                             .font(.title2)
                     }
                     .foregroundColor(Color("TextColor"))
@@ -82,7 +82,7 @@ struct NoteStackView: View {
             .clipped()
             .shadow(color: .black, radius: 2, x: 1, y:1)
             .zIndex(cards.zIndexes[Int(card.sequenceNumber)])
-            .position((startAnimation ? center :  cards.positions[Int(card.sequenceNumber)]))
+            .position((startAnimation ? cards.center :  cards.positions[Int(card.sequenceNumber)]))
             .gesture(
                 DragGesture()
                     .onChanged({ value in
@@ -91,13 +91,14 @@ struct NoteStackView: View {
                     }
                               )//onchanged
                     .onEnded({ value in
+                        cards.showHelp = false
                         startAnimation = true
                         
                         if value.location.x < 100 {
                             cards.flip()
                         }
-                        print(center)
-                        cards.positions[Int(card.sequenceNumber)] = center
+                        //print(cards.center)
+                        cards.positions[Int(card.sequenceNumber)] = cards.center
                     })
                 
             ) //gesture

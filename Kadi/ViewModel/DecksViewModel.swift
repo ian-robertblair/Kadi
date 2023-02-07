@@ -10,10 +10,9 @@ import Foundation
 @MainActor
 class DecksViewModel:ObservableObject {
     @Published var cards = [Deck]()
-    
+    @Published var hasFullVersion:Bool = false
     
     init() {
-        
     }
     
     func getDecks() {
@@ -23,5 +22,18 @@ class DecksViewModel:ObservableObject {
     func deleteDeck(name: String) {
         CoreDataManager.shared.deleteDeckByName(deck: name)
         cards = CoreDataManager.shared.getAllDecks()
+    }
+    
+    func canAddDeck() -> Bool {
+        guard !self.hasFullVersion else {
+            return true
+        }
+        
+        guard CoreDataManager.shared.deckCount() <= 9 else {
+            return false
+        }
+        
+        return true
+      
     }
 }

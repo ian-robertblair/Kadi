@@ -135,4 +135,19 @@ class CoreDataManager {
         }
     }
     
+    func deckCount() -> Int {
+        let context = persistentContainer.viewContext
+        var count = 0
+        let fetchRequest: NSFetchRequest<Deck> = Deck.fetchRequest()
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            count = results.count
+        } catch {
+            print("Problem counting decks...")
+        }
+        
+        return count
+    }
+    
 }

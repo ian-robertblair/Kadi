@@ -14,4 +14,8 @@ class AddDeckViewModel:ObservableObject {
     func addDeck() {
         CoreDataManager.shared.saveDeck(name: name)
     }
+    
+    func checkValidation() -> Bool {
+        return  name.isEmpty
+    }
 }
