@@ -1,0 +1,33 @@
+{
+  "identifier" : "B559FC76",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "034DA2CB",
+      "localizations" : [
+        {
+          "description" : "No deck or card limits.",
+          "displayName" : "Get Full Version",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.kadifull.id",
+      "referenceName" : "FullVersion",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
