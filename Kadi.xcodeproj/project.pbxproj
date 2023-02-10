@@ -26,6 +26,7 @@
 		628EF2822980EEDB001AB563 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2812980EEDB001AB563 /* NoteView.swift */; };
 		628EF2842980F64F001AB563 /* NoteStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2832980F64F001AB563 /* NoteStackViewModel.swift */; };
 		628EF28729814A7B001AB563 /* STHeiti-Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 628EF28629814A7B001AB563 /* STHeiti-Light.ttc */; };
+		62BEDC582992860E00DBEBB4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BEDC572992860E00DBEBB4 /* Launch Screen.storyboard */; };
 		62FD86FC29822A940078EE5A /* DeckIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD86FB29822A940078EE5A /* DeckIconView.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		628EF2832980F64F001AB563 /* NoteStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStackViewModel.swift; sourceTree = "<group>"; };
 		628EF28629814A7B001AB563 /* STHeiti-Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Light.ttc"; sourceTree = "<group>"; };
 		628EF28829814AD0001AB563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		62BEDC572992860E00DBEBB4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		62FD86FB29822A940078EE5A /* DeckIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				628EF2552980DD90001AB563 /* KadiApp.swift */,
 				628EF2592980DD92001AB563 /* Assets.xcassets */,
 				628EF25B2980DD92001AB563 /* Preview Content */,
+				62BEDC572992860E00DBEBB4 /* Launch Screen.storyboard */,
 			);
 			path = Kadi;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				628EF28729814A7B001AB563 /* STHeiti-Light.ttc in Resources */,
 				6225F6392985F0D600984B2B /* PropertyList.plist in Resources */,
 				628EF25D2980DD92001AB563 /* Preview Assets.xcassets in Resources */,
+				62BEDC582992860E00DBEBB4 /* Launch Screen.storyboard in Resources */,
 				628EF25A2980DD92001AB563 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +404,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -434,6 +439,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

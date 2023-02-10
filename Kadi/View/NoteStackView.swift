@@ -20,7 +20,7 @@ struct NoteStackView: View {
                 HStack {
                     Spacer()
                     Button {
-                        //
+                       
                         cards.deleteCard(card: card)
                     } label: {
                         Image(systemName: "x.circle")
@@ -97,7 +97,7 @@ struct NoteStackView: View {
                         if value.location.x < 100 {
                             cards.flip()
                         }
-                        //print(cards.center)
+                    
                         cards.positions[Int(card.sequenceNumber)] = cards.center
                     })
                 
@@ -107,10 +107,4 @@ struct NoteStackView: View {
     }
 }
 
-/*
-struct NoteStackView_Previews: PreviewProvider {
-    static var previews: some View {
-        NoteStackView(cards: NoteViewModel(), card:Card())
-    }
-}
-*/
+

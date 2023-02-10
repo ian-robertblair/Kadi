@@ -14,7 +14,6 @@ struct NoteView: View {
     let deckName: String
     
     var body: some View {
-        //NavigationView {
             VStack {
                 GeometryReader { geometry in
                     ZStack {
@@ -47,14 +46,12 @@ struct NoteView: View {
                         cards.center = CGPoint(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY - 50)
                         cards.deckName = self.deckName
                         cards.center = cards.center
-                        //print(center.debugDescription)
                         cards.getCards()
                         cards.setPositions()
                         cards.setzIndexes()
                         cards.setisFlipped()
                     }
                 }//Geometry
-                
             }//VStack
             .sheet(isPresented: $showAddCardView, content: {
                 AddCardView(noteViewModel: cards)
@@ -74,7 +71,6 @@ struct NoteView: View {
                     .padding()
                 }
             }
-        //} //Navigation
     }
 }
 

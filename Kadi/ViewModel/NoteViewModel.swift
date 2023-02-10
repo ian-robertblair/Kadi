@@ -35,7 +35,7 @@ class NoteViewModel:ObservableObject {
             }
         }
         
-        print("Deck cards:  \(zIndexes.count)")
+       
     }
     
     func setisFlipped() {
@@ -44,7 +44,7 @@ class NoteViewModel:ObservableObject {
             isFlipped.append(false)
         }
         
-        print("isFlipped: \(zIndexes.count)")
+       
     }
     
     func setzIndexes() {
@@ -56,14 +56,14 @@ class NoteViewModel:ObservableObject {
             
         }
         
-        print("Indexs: \(zIndexes.count)")
+       
     }
     
     func setPositions() {
         positions.removeAll()
         for _ in deck {
             positions.append(center)
-            //print(position)
+           
         }
     }
     
@@ -77,7 +77,7 @@ class NoteViewModel:ObservableObject {
        
             let temp = zIndexes.removeLast()
             zIndexes.insert(temp, at: 0)
-            print("deck flipped")
+            
         }
 }
 
