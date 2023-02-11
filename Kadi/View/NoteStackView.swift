@@ -95,7 +95,10 @@ struct NoteStackView: View {
                         startAnimation = true
                         
                         if value.location.x < 100 {
-                            cards.flip()
+                            DispatchQueue.main.async {
+                                cards.flip()
+                            }
+                           
                         }
                     
                         cards.positions[Int(card.sequenceNumber)] = cards.center

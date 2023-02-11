@@ -21,8 +21,6 @@ class NoteViewModel:ObservableObject {
     @Published var showAddCardView: Bool = false
     @Published var showHelp: Bool = true
   
-   
-    
     init() {
         
     }

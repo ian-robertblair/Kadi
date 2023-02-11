@@ -43,13 +43,16 @@ struct NoteView: View {
                         } //For
                     }//ZStack
                     .onAppear {
-                        cards.center = CGPoint(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY - 50)
-                        cards.deckName = self.deckName
-                        cards.center = cards.center
-                        cards.getCards()
-                        cards.setPositions()
-                        cards.setzIndexes()
-                        cards.setisFlipped()
+                        //changed
+                        DispatchQueue.main.async {
+                            cards.center = CGPoint(x: geometry.frame(in: .local).midX, y: geometry.frame(in: .local).midY - 50)
+                            cards.deckName = self.deckName
+                            cards.center = cards.center
+                            cards.getCards()
+                            cards.setPositions()
+                            cards.setzIndexes()
+                            cards.setisFlipped()
+                        }
                     }
                 }//Geometry
             }//VStack
