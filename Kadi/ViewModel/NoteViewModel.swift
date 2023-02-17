@@ -11,7 +11,7 @@ import Speech
 
 @MainActor
 class NoteViewModel:ObservableObject {
-    var deckName: String = String()
+    @Published var deckName: String = String()
     @Published var deck:[Card] = [Card]()
     @Published var zIndexes = [Double]()
     @Published var positions = [CGPoint]()

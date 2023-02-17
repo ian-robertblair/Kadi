@@ -10,7 +10,7 @@ import SwiftUI
 struct AddDeckView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var addDeckViewModel = AddDeckViewModel()
-    @StateObject var decksViewModel:DecksViewModel
+    @ObservedObject var decksViewModel:DecksViewModel
     @State private var showValidationAlert: Bool = false
     
     var body: some View {

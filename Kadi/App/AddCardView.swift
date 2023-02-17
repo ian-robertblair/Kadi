@@ -11,7 +11,7 @@ struct AddCardView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showValidationAlert: Bool = false
     @StateObject private var addCardViewModel = AddCardViewModel()
-    @StateObject var noteViewModel:NoteViewModel
+    @ObservedObject var noteViewModel:NoteViewModel
     
     var body: some View {
         VStack {
@@ -83,12 +83,15 @@ struct AddCardView: View {
                 if addCardViewModel.checkValidation() {
                     showValidationAlert.toggle()
                 } else {
-                    addCardViewModel.deckName = noteViewModel.deckName
-                    addCardViewModel.addCard()
-                    noteViewModel.getCards()
-                    noteViewModel.setPositions()
-                    noteViewModel.setzIndexes()
-                    noteViewModel.setisFlipped()
+                    DispatchQueue.main.async {
+                        addCardViewModel.deckName = noteViewModel.deckName
+                        addCardViewModel.addCard()
+                        noteViewModel.getCards()
+                        noteViewModel.setPositions()
+                        noteViewModel.setzIndexes()
+                        noteViewModel.setisFlipped()
+                    }
+
                     self.presentationMode.wrappedValue.dismiss()
                 }
             } label: {

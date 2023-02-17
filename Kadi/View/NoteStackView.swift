@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct NoteStackView: View {
-    @StateObject var cards:NoteViewModel
+    @ObservedObject var cards:NoteViewModel
     @StateObject var noteStackViewModel = NoteStackViewModel()
     @State private var startAnimation: Bool = false
     
@@ -98,7 +98,6 @@ struct NoteStackView: View {
                             DispatchQueue.main.async {
                                 cards.flip()
                             }
-                           
                         }
                     
                         cards.positions[Int(card.sequenceNumber)] = cards.center

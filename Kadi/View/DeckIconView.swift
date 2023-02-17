@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DeckIconView: View {
     let name:String
-    let decksViewModel: DecksViewModel
+    @ObservedObject var decksViewModel: DecksViewModel
     @State var showConfirmation:Bool = false
     
     var body: some View {
